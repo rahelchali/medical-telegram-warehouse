@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  postgres_warehouse:
+    image: postgres:15-alpine
+    container_name: postgres_warehouse
+    environment:
+      POSTGRES_DB: medical_db
+      POSTGRES_USER: admin_kara
+      POSTGRES_PASSWORD: password_solutions_2026
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+volumes:
+  postgres_data:
